@@ -1,0 +1,205 @@
+package main
+
+import(
+   "fmt"
+)
+func main(){
+  fmt.Println("HELLO WOLRD")
+}
+variables
+package main
+
+import(
+   "fmt"
+)
+func main(){
+  var x int = 5
+  var y int = 7
+  var sum int = x+y
+  
+ fmt.Println(sum)
+}
+type interference
+package main
+
+import(
+   "fmt"
+)
+func main(){
+  x := 5
+  y := 7
+  sum:= x + y
+  
+  fmt.Println(sum)
+}
+if else packages
+package main
+
+import(
+   "fmt"
+)
+func main(){
+  x := 5
+  if x > 6 {
+     fmt.Println("More than 6")
+  } else if x<2{
+     fmt.Println("less than 6")
+} else {
+     fmt.Println("both the values are the same")
+}
+
+
+}
+arrays
+package main
+
+import(
+   "fmt"
+)
+func main(){
+   var a[5]int
+   a[2] = 7
+   
+ fmt.Println(a)
+
+}
+appending and slicing
+package main
+
+import(
+   "fmt"
+)
+func main(){
+   var a[5]int
+   a[2] = 7
+   b := []int{5,4,3,2,1}
+   b = append(b,13)
+   fmt.Println(a)
+   fmt.Println(b)
+
+}
+maps
+package main
+
+import(
+   "fmt"
+)
+func main(){
+   vertices := make(map[string]int)
+   
+   vertices["triangle"] = 2
+   vertices["square"] = 3
+   vertices["doecagon"] = 12
+   delete(vertices,"triangle")
+   fmt.Println(vertices)
+
+}
+for loops
+package main
+
+import(
+   "fmt"
+)
+func main(){
+   for i:= 0; i<5 ; i++{
+     fmt.Println(i)
+   }
+
+}
+array and for loops
+package main
+
+import(
+   "fmt"
+)
+func main(){ 
+   arr := []string{"a","b","c"}
+   for index, value := range arr{
+     fmt.Println("index:",index,"value:",value)
+   }
+
+}
+maps and for loops
+package main
+
+import(
+   "fmt"
+)
+func main(){ 
+   m := make(map[string]string)
+   m["a"] = "alpha"
+   m["b"] = "beta"
+   for key, value := range m{
+     fmt.Println("key:",key,"value:",value)
+   }
+
+}
+functions and return type
+package main
+
+import(
+   "fmt"
+)
+func main(){ 
+   result := sum(2,3)
+   fmt.Println(result)
+
+}
+func sum(x int, y int) int {
+ return x + y
+}
+square root of a number
+package main
+
+import(
+   "fmt"
+   "errors"
+   "math"
+)
+func main(){ 
+   result, err := sqrt(16)
+   if err != nil {
+     fmt.Println(err)
+  } else{
+     fmt.Println(result)
+ }
+
+}
+func sqrt(x float64) (float64, error) {
+     if x<0 {
+       return 0, errors.New("Underdefined for negative numbers")
+      }
+    return math.Sqrt(x), nil
+}
+structures
+package main
+
+import(
+   "fmt"
+)
+
+type person struct {
+    name string
+    age int
+}
+
+func main()  {
+  p := person{name:"Jake", age:23 }
+  fmt.Println(p)
+}
+pionters increamntaion
+package main
+
+import(
+   "fmt"
+)
+
+func main()  {
+  i :=7
+  inc(&i)
+  fmt.Println(i)
+}
+
+func inc(x *int){
+   *x++
+}
